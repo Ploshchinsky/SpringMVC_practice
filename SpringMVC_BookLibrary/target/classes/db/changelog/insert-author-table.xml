@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="insert-author-table" author="ploton">
+        <insert tableName="author">
+            <column name="id" value="1"/>
+            <column name="name" value="Alexey Ivanov"/>
+            <column name="age" value="23"/>
+            <column name="birth_city" value="Moscow"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" value="2"/>
+            <column name="name" value="Maria Pavlova"/>
+            <column name="age" value="37"/>
+            <column name="birth_city" value="New York"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" value="3"/>
+            <column name="name" value="Mat Donald"/>
+            <column name="age" value="49"/>
+            <column name="birth_city" value="Los Angeles"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" value="4"/>
+            <column name="name" value="Alexa Smith"/>
+            <column name="age" value="19"/>
+            <column name="birth_city" value="Texas"/>
+        </insert>
+        <insert tableName="author">
+            <column name="id" value="5"/>
+            <column name="name" value="John Paul"/>
+            <column name="age" value="29"/>
+            <column name="birth_city" value="Budapest"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
