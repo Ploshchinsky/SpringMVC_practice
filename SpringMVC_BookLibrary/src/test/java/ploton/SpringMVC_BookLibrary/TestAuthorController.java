@@ -48,6 +48,7 @@ class TestAuthorController {
         updates = Map.of("name", "Updated Name", "birthCity", "Updated City");
     }
 
+    //1. Проверяем EndPoint сохранения новой сущности
     @Test
     public void testSaveAuthor() throws Exception {
         Mockito.when(authorService.save(authorList.get(0))).thenReturn(authorList.get(0));
@@ -64,6 +65,7 @@ class TestAuthorController {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.books").value(authorList.get(0).getBooks()));
     }
 
+    //2. Проверяем EndPoint получения всех сущностей с Пагинацией `Pageable`
     @Test
     public void testGetAllPageable() throws Exception {
         Mockito.when(authorService.getAll(Mockito.any(Pageable.class))).thenReturn(
@@ -80,6 +82,7 @@ class TestAuthorController {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.content[1].name").value(authorList.get(1).getName()));
     }
 
+    //3. Проверяем EndPoint получение сущности по ID
     @Test
     public void testGetById() throws Exception {
         Mockito.when(authorService.getById(Mockito.any(Integer.class))).thenReturn(authorList.get(1));
@@ -93,6 +96,7 @@ class TestAuthorController {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.books").value(authorList.get(1).getBooks()));
     }
 
+    //4. Проверяем EndPoint получение сущности по Wrong ID
     @Test
     public void testGetById_WrongId() throws Exception {
         Mockito.when(authorService.getById(Mockito.any(Integer.class)))
@@ -106,6 +110,7 @@ class TestAuthorController {
                         .value("Author ID - " + wrongId));
     }
 
+    //5. Проверяем EndPoint обнавление полей сущности по ID
     @Test
     public void testUpdateById() throws Exception {
         Author updatedAuthor = authorList.get(1);
@@ -123,6 +128,7 @@ class TestAuthorController {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.birthCity").value(authorList.get(1).getBirthCity()));
     }
 
+    //6. Проверяем EndPoint удаление сущности по Wrong ID
     @Test
     public void testDeleteById() throws Exception {
         Mockito.when(authorService.deleteById(Mockito.any(Integer.class))).thenReturn(1);
@@ -132,6 +138,7 @@ class TestAuthorController {
                 .andExpect(MockMvcResultMatchers.jsonPath("$").value(1));
     }
 
+    //7. Проверяем EndPoint удаления сущности по Wrong ID
     @Test
     public void testDeleteById_WrongId() throws Exception {
         Mockito.when(authorService.deleteById(Mockito.any(Integer.class)))
