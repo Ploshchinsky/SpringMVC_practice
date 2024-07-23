@@ -1,0 +1,12 @@
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\controller\AuthorController.java
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\controller\BookController.java
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\exception\EntityValidationException.java
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\exception\GlobalExceptionHandler.java
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\model\entity\Author.java
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\model\entity\Book.java
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\model\Repository\AuthorRepository.java
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\model\Repository\BookRepository.java
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\model\service\AuthorService.java
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\model\service\BookService.java
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\model\service\Serviceable.java
+C:\Users\Ploshchinsky\IdeaProjects\SpringMVC_Practice\SpringMVC_BookLibrary\src\main\java\ploton\SpringMVC_BookLibrary\SpringMvcBookLibraryApplication.java
