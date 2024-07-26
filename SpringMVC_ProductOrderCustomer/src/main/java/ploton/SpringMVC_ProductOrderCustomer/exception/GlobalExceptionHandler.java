@@ -31,6 +31,18 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(EntityValidationException.class)
+    public ResponseEntity<Error> entityValidationExceptionHandler(EntityValidationException ex) {
+        error = new Error("EntityValidationException", ex.getMessage());
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<Error> illegalArgumentExceptionHandler(IllegalArgumentException ex) {
+        error = new Error("IllegalArgumentException", ex.toString());
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+
     @Data
     @AllArgsConstructor
     public static class Error {
