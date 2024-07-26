@@ -88,7 +88,7 @@ public class TestOrderController {
     }
 
     @Test
-    void testGetById_WrongId() throws Exception {
+    void testGetById_WrongId_NoSuchElementException() throws Exception {
         when(orderService.findById(anyInt())).thenThrow(new NoSuchElementException("Order ID - " + anyInt()));
 
         mockMvc.perform(get("/api/v1/orders/{1}", 1))
@@ -112,6 +112,17 @@ public class TestOrderController {
     }
 
     @Test
+    void testUpdateById_WrongId_NoSuchElementException() throws Exception {
+        when(orderService.updateById(eq(1), anyMap())).thenThrow(new NoSuchElementException("Order ID - " + 1));
+
+        mockMvc.perform(patch("/api/v1/orders/{1}", 1)
+                        .contentType(MediaType.APPLICATION_JSON
+                        )
+                        .content("{\"shippingAddress\":\"Updated Address\",\"orderStatus\":\"CANCELED\"}"))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
     void testDeleteById() throws Exception {
         when(orderService.deleteById(anyInt())).thenReturn(1);
 
@@ -121,7 +132,7 @@ public class TestOrderController {
     }
 
     @Test
-    void testDeleteById_WrongId() throws Exception {
+    void testDeleteById_WrongId_NoSuchElementException() throws Exception {
         when(orderService.deleteById(666)).thenThrow(new NoSuchElementException("Order ID - " + 666));
 
         mockMvc.perform(delete("/api/v1/orders/{666}", 666))
