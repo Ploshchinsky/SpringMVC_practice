@@ -83,6 +83,7 @@ public class OrderService implements OrderServiceable {
                 case "products":
                     if (value instanceof List)
                         entity.setProducts((List<Product>) value);
+                    break;
                 case "customer":
                     if (value instanceof Map) {
                         Map<String, Object> customerMap = (Map<String, Object>) value;
